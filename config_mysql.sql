@@ -1,0 +1,2 @@
+GRANT ALL ON sonar.* TO 'sonar'@'%' IDENTIFIED BY 'sonar';
+FLUSH PRIVILEGES;

@@ -1,0 +1,13 @@
+FROM jenkins/jenkins:lts
+
+MAINTAINER Liora Milbaum, <lmilbaum@redhat.com>
+
+ENV JENKINS_ADMIN_USER="jenkins" JENKINS_ADMIN_PASS="jenkins"
+ENV JAVA_OPTS="-Djenkins.install.runSetupWizard=false -Duser.timezone=Asia/Jerusalem"
+ENV SONAR_SERVER_URL="http://localhost:9000"
+ENV RHDP_SONAR_ENABLED=true
+
+COPY resources/plugins.txt /usr/share/jenkins/ref/
+COPY ./resources/init.groovy.d/ ${JENKINS_HOME}/init.groovy.d/
+
+RUN xargs install-plugins.sh < /usr/share/jenkins/ref/plugins.txt
