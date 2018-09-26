@@ -1,6 +1,7 @@
+#!groovy
 import hudson.plugins.git.*;
 
-def scm = new GitSCM("https://github.com/devopsloft/devopsloft.git")
+def scm = new GitSCM("https://github.com/lioramilbaum/devopsloft.git")
 scm.branches = [new BranchSpec("*/static_analysis")];
 
 def flowDefinition = new org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition(scm, "Jenkinsfile")

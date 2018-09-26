@@ -38,7 +38,7 @@ cloudbees-folder:6.6
 codescanner:0.11
 command-launcher:1.2
 conditional-buildstep:1.3.6
-config-file-provider:3.1
+config-file-provider:3.2
 copy-to-slave:1.4.4
 copyartifact:1.41
 credentials-binding:1.16
@@ -56,7 +56,7 @@ docker-build-publish:1.3.2
 docker-build-step:2.0
 docker-commons:1.13
 docker-workflow:1.17
-durable-task:1.25
+durable-task:1.26
 email-ext:2.63
 envinject-api:1.5
 envinject:2.1.6
@@ -85,15 +85,15 @@ javadoc:1.4
 jdepend:1.3.0
 jenkins-design-language:1.8.3
 jenkinswalldisplay:0.6.34
-jira:3.0.1
+jira:3.0.2
 job-dsl:1.70
-jobConfigHistory:2.18
+jobConfigHistory:2.18.1
 jquery-detached:1.2.1
 jquery-ui:1.0.2
 jquery:1.12.4-0
 jsch:0.1.54.2
 jslint:0.8.2
-junit:1.25
+junit:1.26.1
 junit-attachments:1.5
 ldap:1.20
 mailer:1.21
@@ -116,7 +116,7 @@ pipeline-build-step:2.7
 pipeline-github-lib:1.0
 pipeline-graph-analysis:1.7
 pipeline-input-step:2.8
-pipeline-maven:3.5.12
+pipeline-maven:3.5.13
 pipeline-milestone-step:1.3.1
 pipeline-model-api:1.3.2
 pipeline-model-declarative-agent:1.1.1
@@ -129,7 +129,7 @@ pipeline-stage-view:2.10
 plain-credentials:1.4
 promoted-builds:3.2
 pubsub-light:1.12
-rebuild:1.28
+rebuild:1.29
 repository-connector:1.2.4
 resource-disposer:0.12
 role-strategy:2.9.0
@@ -144,7 +144,7 @@ sse-gateway:1.16
 ssh-agent:1.16
 ssh-credentials:1.14
 ssh-slaves:1.28.1
-structs:1.14
+structs:1.15
 subversion:2.12.1
 swarm:3.14
 tap:2.2.1
@@ -161,7 +161,7 @@ workflow-api:2.29
 workflow-basic-steps:2.11
 workflow-cps-global-lib:2.11
 workflow-cps:2.55
-workflow-durable-task-step:2.21
+workflow-durable-task-step:2.22
 workflow-job:2.25
 workflow-multibranch:2.20
 workflow-remote-loader:1.4
