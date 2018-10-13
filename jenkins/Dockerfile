@@ -7,9 +7,9 @@ ENV JAVA_OPTS="-Djenkins.install.runSetupWizard=false -Duser.timezone=Asia/Jerus
 ENV SONAR_SERVER_URL="http://sonarqube:9000"
 ENV RHDP_SONAR_ENABLED=true
 
-COPY resources/plugins.txt /usr/share/jenkins/ref/
-COPY resources/init.groovy.d/ ${JENKINS_HOME}/init.groovy.d/
-COPY resources/requirements.txt /var/tmp
+COPY plugins.txt /usr/share/jenkins/ref/
+COPY init.groovy.d/ ${JENKINS_HOME}/init.groovy.d/
+COPY requirements.txt /var/tmp
 
 USER root
 ENV DEBIAN_FRONTEND=noninteractive
@@ -20,5 +20,5 @@ RUN pip install -r /var/tmp/requirements.txt
 
 USER jenkins
 RUN xargs install-plugins.sh < /usr/share/jenkins/ref/plugins.txt
-RUN wget -q -O /var/tmp/sonar-scanner-cli-3.2.0.1227-linux.zip https://sonarsource.bintray.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-3.2.0.1227-linux.zip
+RUN wget -q -O /var/tmp/sonar-scanner-cli-3.2.0.1227-linux.zip https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-3.2.0.1227-linux.zip
 RUN unzip /var/tmp/sonar-scanner-cli-3.2.0.1227-linux.zip -d /var/tmp
