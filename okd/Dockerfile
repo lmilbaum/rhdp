@@ -1,9 +1,7 @@
-FROM kubevirt/libvirt:latest
+FROM ubuntu:18.04
 
-RUN mkdir /tmp
+ENV DEBIAN_FRONTEND noninteractive
+RUN apt-get update \
+&& apt-get install -y rsync vagrant virtualbox
 
-RUN dnf install -y qemu vagrant \
-&& dnf clean all
-RUN vagrant plugin install vagrant-libvirt
-
-COPY Vagrantfile /tmp
+COPY Vagrantfile /var/tmp

@@ -3,7 +3,8 @@
 command=$1
 
 if [ "$command" = "start" ]; then
-	docker build -t rhdp/outer .
+	docker build -t rhdp/ubuntu .
+#	docker run -it --privileged -v /var/run/libvirt:/var/run/libvirt rhdp/libvirt
 else
 	docker rm $(docker ps -aq)
 	docker rmi $(docker images -q)

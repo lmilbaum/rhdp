@@ -1,0 +1,9 @@
+FROM kubevirt/libvirt:latest
+
+RUN dnf install -y rsync openssh-clients qemu virt-manager vagrant \
+&& dnf clean all
+RUN vagrant plugin install vagrant-libvirt
+
+COPY Vagrantfile /var/tmp
+
+CMD ["/usr/sbin/init"]
